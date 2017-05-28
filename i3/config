@@ -195,7 +195,7 @@ bar {
 }
 
 # background
-exec_always --no-startup-id feh --bg-fill /home/vagner/Vagner/Fotos/vagner.jpg
+exec_always --no-startup-id feh --bg-fill ./bg/vagner.jpg
 
 # i3lock
 #bindsym $mod+Shift+x exec i3lock
