@@ -49,7 +49,8 @@ font pango: M+ 1m, Source Code Pro, Regular, 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+# bindsym $mod+Return exec termite
+bindsym $mod+Return exec ~/.config/i3/urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -203,7 +204,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec_always --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2
 
-exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/termite -e ranger'
+exec --no-startup-id i3-msg 'workspace 1; exec ~/.config/i3/urxvtc -e ranger'
+
 exec --no-startup-id i3-msg 'workspace 2; exec /usr/bin/firefox'
 
 # i3lock
