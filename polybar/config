@@ -242,7 +242,8 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
+; interface = wlp4s0
+interface = wlp1s0b1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -344,6 +345,7 @@ format-full-underline = ${self.format-charging-underline}
 ramp-capacity-2 = 
 ramp-capacity-1 = 
 ramp-capacity-0 = 
+ramp-capacity-0-foreground = #de0037
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-2 = 
