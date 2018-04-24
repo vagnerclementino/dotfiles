@@ -227,7 +227,7 @@ bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 # Lock screen
-bindsym Mod4+l exec i3lock -ft -i ~/Imagens/i3wm-lock-4.png
+bindsym Mod4+l exec i3lock -ft -i ~/.config/i3/bg/lock_screen.png
 
 font pango: M+ 1m, Source Code Pro, Regular, 10
 
