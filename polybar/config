@@ -43,9 +43,10 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Source Code Pro:size=10"
-font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-1 = FontAwesome:pixelsize=12;4
+; font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+; font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+; font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-left = i3
 modules-center = mpd
@@ -327,8 +328,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ADP1
+battery = BAT0
+adapter = ACAD
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
@@ -365,7 +366,7 @@ format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-format-prefix = 
+format-prefix = " "
 label = %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}

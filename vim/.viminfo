@@ -1,0 +1,463 @@
+# Este arquivo viminfo foi gerado pelo Vim 8.0.
+# Você pode editá-lo se for cuidadoso!
+
+# Viminfo version
+|1,4
+
+# Valor de 'encoding' quando este arquivo foi escrito
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Último padrão de busca :
+~MSle0~/local
+
+# Histórico de linha de comando (mais recente primeiro):
+:q
+|2,0,1527682905,,"q"
+:wq
+|2,0,1527607219,,"wq"
+:q!
+|2,0,1527605830,,"q!"
+:pwd
+|2,0,1527605799,,"pwd"
+:e $MYVIMRC
+|2,0,1527605794,,"e $MYVIMRC"
+:reg
+|2,0,1527605540,,"reg"
+:w
+|2,0,1527605319,,"w"
+:term
+|2,0,1527605236,,"term"
+:has('clipboard')
+|2,0,1521424557,,"has('clipboard')"
+:w 
+|2,0,1521424277,,"w "
+:enew 
+|2,0,1521424253,,"enew "
+
+# Histórico de expressões de busca (mais recente primeiro):
+?/local
+|2,1,1521424434,47,"local"
+
+# Histórico de expressões (mais recente primeiro):
+
+# Histórico de linha de entrada (mais recente primeiro):
+
+# Histórico de linha de debug (mais recente primeiro):
+
+# Registradores:
+"0	CHAR	0
+	urxvtd -q -f -o
+	
+|3,0,0,0,2,0,1521583651,"urxvtd -q -f -o",""
+""1	LINE	0
+	powerline-daemon -q . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+|3,1,1,1,1,0,1527607217,"powerline-daemon -q . /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh"
+"2	LINE	0
+	pip install virtualenv virtualenvwrapper
+|3,0,2,1,1,0,1527605577,"pip install virtualenv virtualenvwrapper"
+"3	LINE	0
+	export WORKON_HOME=~/Envs
+|3,0,3,1,1,0,1527605290,"export WORKON_HOME=~/Envs"
+"4	LINE	0
+	urxvtd -q -f -o
+|3,0,4,1,1,0,1527605207,"urxvtd -q -f -o"
+"5	LINE	0
+	urxvtd -q -f -o
+|3,0,5,1,1,0,1527605200,"urxvtd -q -f -o"
+"6	LINE	0
+	URxvt.background:	#1F1D19
+	URxvt.foreground:	#DEDEDE
+	URxvt.font:			xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true
+	URxvt.boldFont:		xft:DejaVu Sans Mono:bold:pixelsize=14:antialias=true:hinting=true
+	URxvt.scrollBar:	false
+	URxvt.saveLines:	65535
+	URxvt.perl-ext-common: keyboard-select,url-select,clipboard
+	URxvt.keysym.M-Escape: perl:keyboard-select:activate
+	URxvt.keysym.M-s: perl:keyboard-select:search
+	URxvt.keysym.M-u: perl:url-select:select_next
+	URxvt.keysym.M-c:   perl:clipboard:copy
+	URxvt.keysym.M-v:   perl:clipboard:paste
+	URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+	Xft*dpi:       96
+	Xft*antialias: True
+	Xft*hinting:   Full
+	URxvt.keysym.KP_Add:    +
+	URxvt.keysym.KP_Subtract: -
+	URxvt.keysym.KP_Multiply: *
+	URxvt.keysym.KP_Divide  : /
+	URxvt.keysym.KP_Decimal : .
+	URxvt.keysym.KP_Separator : ,
+	URxvt.keysym.KP_1:      1
+	URxvt.keysym.KP_2:      2
+	URxvt.keysym.KP_3:      3
+	URxvt.keysym.KP_4:      4
+	URxvt.keysym.KP_5:      5
+	URxvt.keysym.KP_6:      6
+	URxvt.keysym.KP_7:      7
+	URxvt.keysym.KP_8:      8
+	URxvt.keysym.KP_9:      9
+	URxvt.keysym.KP_0:      0
+	
+	!! Larger history limit
+	urxvt.saveLines: 1000000
+	
+	!! Perl extensions
+	urxvt.perl-ext-common: default,matcher,font-size
+	!! Open urls in browser with Control-Click
+	urxvt.urlLauncher: /usr/bin/firefox
+	urxvt.matcher.button: C1
+	!! Change font size on Control-Plus/Minus
+	URxvt.keysym.Control-0x2b: perl:font-size:increase
+	URxvt.keysym.Control-0x2d: perl:font-size:decrease
+|3,0,6,1,44,0,1521583016,"URxvt.background:	#1F1D19","URxvt.foreground:	#DEDEDE","URxvt.font:			xft:DejaVu Sans Mono:pixelsize=14:antialias=true:hinting=true","URxvt.boldFont:		xft:DejaVu Sans Mono:bold:pixelsize=14:antialias=true:hinting=true","URxvt.scrollBar:	false","URxvt.saveLines:	65535","URxvt.perl-ext-common: keyboard-select,url-select,clipboard","URxvt.keysym.M-Escape: perl:keyboard-select:activate","URxvt.keysym.M-s: perl:keyboard-select:search",>47
+|<"URxvt.keysym.M-u: perl:url-select:select_next","URxvt.keysym.M-c:   perl:clipboard:copy","URxvt.keysym.M-v:   perl:clipboard:paste","URxvt.keysym.M-C-v: perl:clipboard:paste_escaped","Xft*dpi:       96","Xft*antialias: True","Xft*hinting:   Full","URxvt.keysym.KP_Add:    +","URxvt.keysym.KP_Subtract: -","URxvt.keysym.KP_Multiply: *","URxvt.keysym.KP_Divide  : /","URxvt.keysym.KP_Decimal : .","URxvt.keysym.KP_Separator : ,","URxvt.keysym.KP_1:      1","URxvt.keysym.KP_2:      2",>27
+|<"URxvt.keysym.KP_3:      3","URxvt.keysym.KP_4:      4","URxvt.keysym.KP_5:      5","URxvt.keysym.KP_6:      6","URxvt.keysym.KP_7:      7","URxvt.keysym.KP_8:      8","URxvt.keysym.KP_9:      9","URxvt.keysym.KP_0:      0","","!! Larger history limit","urxvt.saveLines: 1000000","","!! Perl extensions","urxvt.perl-ext-common: default,matcher,font-size","!! Open urls in browser with Control-Click","urxvt.urlLauncher: /usr/bin/firefox","urxvt.matcher.button: C1",>43
+|<"!! Change font size on Control-Plus/Minus","URxvt.keysym.Control-0x2b: perl:font-size:increase","URxvt.keysym.Control-0x2d: perl:font-size:decrease"
+"7	LINE	0
+	URxvt.perl-ext-common:  ...,resize-font,...
+|3,0,7,1,1,0,1521582910,"URxvt.perl-ext-common:  ...,resize-font,..."
+"8	LINE	0
+	URxvt.font: 9x15
+|3,0,8,1,1,0,1521582364,"URxvt.font: 9x15"
+"9	LINE	0
+	URxvt.perl-ext-common: ...,fullscreen,...
+|3,0,9,1,1,0,1521581077,"URxvt.perl-ext-common: ...,fullscreen,..."
+"-	CHAR	0
+	 
+|3,0,36,0,1,0,1521582873," "
+
+# Marcas nos arquivos:
+'0  1  0  /run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py
+|4,48,1,0,1527619991,"/run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py"
+'1  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,49,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+'2  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,50,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+'3  114  0  ~/.zshrc
+|4,51,114,0,1527607219,"~/.zshrc"
+'4  1  0  /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+|4,52,1,0,1527607202,"/usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh"
+'5  114  19  ~/.zshrc
+|4,53,114,19,1527607175,"~/.zshrc"
+'6  733  0  ~/.vimrc
+|4,54,733,0,1527605830,"~/.vimrc"
+'7  6  0  ~/workspace/django-evolus/NERD_tree_1
+|4,55,6,0,1527605612,"~/workspace/django-evolus/NERD_tree_1"
+'8  114  0  ~/.zshrc
+|4,56,114,0,1527605293,"~/.zshrc"
+'9  114  0  ~/.zshrc
+|4,57,114,0,1527605293,"~/.zshrc"
+
+# Lista de saltos (mais recente primeiro):
+-'  1  0  /run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py
+|4,39,1,0,1527619991,"/run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py"
+-'  1  0  /run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py
+|4,39,1,0,1527619991,"/run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py"
+-'  1  0  /run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py
+|4,39,1,0,1527619991,"/run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py"
+-'  1  0  /run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py
+|4,39,1,0,1527619991,"/run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  35  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,35,0,1527616153,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  1  0  ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+|4,39,1,0,1527615889,"~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  4  0  ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+|4,39,4,0,1527608742,"~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+|4,39,1,0,1527608736,"~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1527608730,"~/NERD_tree_1"
+
+# Histórico de marcas nos arquivos (mais recente primeiro):
+
+> ~/NERD_tree_1
+	*	1527682900	0
+	"	6	0
+	.	1	0
+	+	1	0
+
+> /run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/deputados.py
+	*	1527619989	0
+	"	1	0
+
+> /run/media/vagner/Seagate Expansion Drive/bkp_home_arch/vagner/NERD_tree_1
+	*	1527619989	0
+	"	6	0
+	.	1	0
+	+	1	0
+
+> ~/Vagner/Programas/system_rescue/tutorial_usb_stick.txt
+	*	1527616150	0
+	"	35	0
+
+> ~/Vagner/Programas/system_rescue/NERD_tree_1
+	*	1527615889	0
+	"	6	0
+	.	1	0
+	+	1	0
+
+> ~/workspace/django-evolus/evolUS/evolucao/static/css/signin.css
+	*	1527608739	0
+	"	4	0
+
+> ~/workspace/django-evolus/evolUS/evolucao/migrations/__init__.py
+	*	1527608732	0
+	"	1	0
+
+> ~/.zshrc
+	*	1527607218	0
+	"	114	0
+	^	115	0
+	.	114	0
+	+	95	0
+	+	113	0
+	+	114	0
+	+	113	0
+	+	114	19
+	+	114	0
+	+	115	0
+	+	114	0
+
+> /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+	*	1527607200	0
+	"	1	0
+
+> ~/.vimrc
+	*	1527605826	0
+	"	733	0
+	^	733	0
+	.	734	0
+	+	733	0
+	+	734	0
+
+> /usr/share/vim/vim81/doc/help.txt
+	*	1527605603	0
+	"	1	0
+
+> ~/workspace/django-evolus/NERD_tree_1
+	*	1527605600	0
+	"	6	0
+	.	1	0
+	+	1	0
+
+> ~/.xinitrc
+	*	1521583651	0
+	"	4	0
+	^	3	0
+	.	3	0
+	+	2	0
+	+	3	0
+
+> ~/.Xresources
+	*	1521583019	0
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	46
+	+	1	54
+	+	1	0
+
+> ~/workspace/.Xresources
+	*	1521582132	0
+	"	1	0
+
+> ~/workspace/urxvt-config/.Xresources
+	*	1521582018	0
+	"	1	0
+
+> ~/workspace/urxvt-config/Xresources
+	*	1521581542	0
+	"	1	0
+
+> ~/workspace/NERD_tree_1
+	*	1521424163	0
+	"	6	0
+	.	1	0
+	+	1	0
+
+> ~/.zshrc.pre-oh-my-zsh
+	*	1521423827	0
+	"	1	0
