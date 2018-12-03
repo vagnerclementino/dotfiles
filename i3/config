@@ -88,6 +88,8 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+bindsym $mod+m+Shift+Left move workspace to output left
+bindsym $mod+m+Shift+Right move workspace to output right
 # split in horizontal orientation
 bindsym $mod+h split v
 
@@ -203,6 +205,8 @@ exec_always --no-startup-id feh --bg-fill ~/.config/i3/bg/vagner.jpg
 exec_always --no-startup-id mpd ~/.config/mpd/mpd.conf
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+exec_always --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
 
 # exec_always --no-startup-id setxkbmap -model abnt2 -layout br -variant abnt2
 
