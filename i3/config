@@ -116,6 +116,9 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# workspace 1 output LVDS-1
+# workspace 2 output HDMI-1
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -291,3 +294,14 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ '+5%'
 
 #Rename a workspace
 bindsym $mod+n exec ~/.config/i3/i3-rename-workspace
+
+# browser pop-ups
+# floating_minimum_size 300 x 300
+# floating_maximum_size 300 x 300
+floating_maximum_size -1 x -1
+
+#Starte Geoclue Agent
+exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
+
+#Start Redshift automatically
+exec --no-startup-id redshift-gtk
