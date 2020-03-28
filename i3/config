@@ -256,3 +256,24 @@ bindsym $mod+Shift+Tab workspace prev
 
 #Adds bind to tilix quake mode
 bindsym F12 exec tilix --quake
+
+#You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 0
+
+# Only enable outer gaps when there is exactly one container
+smart_gaps inverse_outer
+# Only enable gaps on a workspace when there is at least one container
+smart_gaps on
+
+gaps inner 5
+gaps outer 5
+gaps bottom 0
+gaps top 0
+
+# Activate smart borders (always)
+# smart_borders on
+
+# Activate smart borders (only when there are effectively no gaps)
+# smart_borders no_gaps
+
+
