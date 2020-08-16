@@ -49,3 +49,14 @@ let g:winresizer_horiz_resize=1
 let g:easyescape_chars = { "j": 2 }
 let g:easyescape_timeout = 500
 cnoremap jj <ESC>
+ 
+" enable AutoSave on Vim startup
+let g:auto_save = 1
+let g:auto_save_events = ["InsertLeave", "TextChanged"]
+
+let g:go_rename_command = 'gopls'
+
+let g:UltiSnipsExpandTrigger="<Right>"
+let g:UltiSnipsJumpForwardTrigger="<Right>"
+
+let g:airline_theme='molokai'

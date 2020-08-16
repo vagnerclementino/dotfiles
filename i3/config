@@ -277,3 +277,5 @@ gaps top 0
 # smart_borders no_gaps
 
 
+exec --no-startup-id volumeicon
+exec --no-startup-id blueman-tray

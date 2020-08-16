@@ -75,6 +75,7 @@ plugins=(
    colored-man-pages
    zsh-autosuggestions
    zsh-syntax-highlighting
+   web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,7 +105,7 @@ fi
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ec2-vclementino="ssh -i "ec2-vclementino.pem" -p 2212 ec2-user@ec2-54-233-185-56.sa-east-1.compute.amazonaws.com"
+alias ec2-vclementino="ssh -i "~/ec2-vclementino.pem" -p 2212 ec2-user@ec2-54-233-185-56.sa-east-1.compute.amazonaws.com"
 alias vim=nvim
 
 . /home/vclementino/.asdf/asdf.sh
@@ -120,4 +121,8 @@ autoload -Uz compinit && compinit
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
 	        source /etc/profile.d/vte.sh
 fi
-  
+
+export GOPATH="/home/vclementino/.asdf/installs/golang/1.13.12/packages"
+export GOROOT="/home/vclementino/.asdf/installs/golang/1.13.12/go"
+
+		
