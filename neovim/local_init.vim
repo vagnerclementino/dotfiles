@@ -58,22 +58,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline_theme='molokai'
 let g:airline_powerline_fonts = 1
 
-" Changes because youcomplete to me
-" let g:UltiSnipsExpandTrigger="<c-j>"
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-let g:auto_save = 1  " enable AutoSave on Vim startup
-let g:auto_save_events = ["InsertLeave", "TextChanged"]
-
 let g:go_rename_command = 'gopls'
-
-nmap <F5> :TODOToggle<CR>
-
 
 let g:tagbar_type_go = {
 	\ 'ctagstype' : 'go',
@@ -120,7 +105,6 @@ let g:go_highlight_build_constraints = 1
 
 let g:rehash256 = 1
 let g:molokai_original = 1
-
 
 let g:coc_global_extensions = ['coc-tsserver']
 
