@@ -39,7 +39,7 @@ set directory=~/.tmp
 " Faster and improved grep using ag (The Silver Searcher)
 if executable('ag')
     set grepprg=ag\ --vimgrep\ $*
-    set grepformat=%f:%l:%c:%m
+    se\ grepformat=%f:%l:%c:%m
 endif
 
 let g:winresizer_vert_resize=1
@@ -47,6 +47,7 @@ let g:winresizer_horiz_resize=1
 
 let g:easyescape_chars = { "j": 2 }
 let g:easyescape_timeout = 500
+
 cnoremap jj <ESC>
  
 " enable AutoSave on Vim startup
@@ -117,3 +118,144 @@ if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
 endif
 
 nmap <leader>rn <Plug>(coc-rename)
+
+let g:nerdtree_tabs_open_on_gui_startup = 0
+
+"" Close buffer
+noremap <leader>c :bd!<CR>
+
+" Terminal Function
+let g:term_buf = 0
+let g:term_win = 0
+function! TermToggle(height)
+    if win_gotoid(g:term_win)
+        hide
+    else
+        botright new
+        exec "resize " . a:height
+        try
+            exec "buffer " . g:term_buf
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let g:term_buf = bufnr("")
+            set nonumber
+            set norelativenumber
+            set signcolumn=no
+        endtry
+        startinsert!
+        let g:term_win = win_getid()
+    endif
+endfunction
+
+" Terminal go back to normal mode
+tnoremap <Esc> <C-\><C-n>
+tnoremap :q! <C-\><C-n>:q!<CR>
+
+" terminal emulation
+nnoremap <silent> <leader>sh :call TermToggle(10)<CR>
+
+let g:deoplete#enable_at_startup = 1
+
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
+let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
+
+let g:lastplace_ignore_buftype = "quickfix,nofile,help"
+
+let NERDTreeShowHidden=1
+
+let g:go_metalinter_command='golangci-lint'
+let g:go_metalinter_autosave = 0
+let g:go_metalinter_enabled = [ 
+    \"asasalint",
+    \"asciicheck",
+    \"bidichk",
+    \"bodyclose",
+    \"containedctx",
+    \"contextcheck",
+    \"cyclop",
+    \"decorder",
+    \"depguard",
+    \"dogsled",
+    \"dupl",
+    \"dupword",
+    \"durationcheck",
+    \"errcheck",
+    \"errname",
+    \"errorlint",
+    \"execinquery",
+    \"exhaustive",
+    \"exportloopref",
+    \"forbidigo",
+    \"forcetypeassert",
+    \"gci",
+    \"gochecknoinits",
+    \"gocognit",
+    \"goconst",
+    \"gocritic",
+    \"gocyclo",
+    \"godot",
+    \"godox",
+    \"goerr113",
+    \"gofmt",
+    \"goheader",
+    \"goimports",
+    \"gomnd",
+    \"gomoddirectives",
+    \"gomodguard",
+    \"goprintffuncname",
+    \"gosimple",
+    \"govet",
+    \"grouper",
+    \"importas",
+    \"ineffassign",
+    \"interfacebloat",
+    \"lll",
+    \"loggercheck",
+    \"maintidx",
+    \"makezero",
+    \"nakedret",
+    \"nestif",
+    \"nilerr",
+    \"nilnil",
+    \"nlreturn",
+    \"noctx",
+    \"nolintlint",
+    \"nonamedreturns",
+    \"nosprintfhostport",
+    \"paralleltest",
+    \"prealloc",
+    \"predeclared",
+    \"promlinter",
+    \"reassign",
+    \"revive",
+    \"staticcheck",
+    \"stylecheck",
+    \"tenv",
+    \"testableexamples",
+    \"testpackage",
+    \"thelper",
+    \"tparallel",
+    \"typecheck",
+    \"unconvert",
+    \"unparam",
+    \"unused",
+    \"usestdlibvars",
+    \"varnamelen",
+    \"whitespace",
+    \"wrapcheck",
+    \"wsl",
+    \]
+
+
+set spelllang=en,pt_br
+set spellsuggest=best,9
+
+" let g:go_debug = ['shell-commands']
+let g:auto_save = 1  " enable AutoSave on Vim startup
+
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
