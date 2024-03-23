@@ -1,4 +1,4 @@
-" vim-bootstrap 2023-05-12 12:22:04
+" vim-bootstrap 2023-09-18 00:39:18
 
 "*****************************************************************************
 "" Vim-Plug core
@@ -48,7 +48,7 @@ Plug 'majutsushi/tagbar'
 Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
-Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plug 'tpope/vim-rhubarb' " required by fugitive to :GBrowse
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 
@@ -128,7 +128,7 @@ Plug 'vim-scripts/slimv.vim'
 " lua
 "" Lua Bundle
 Plug 'xolox/vim-lua-ftplugin'
-Plug 'xolox/vim-lua-inspect'
+" Plug 'xolox/vim-lua-inspect'
 
 
 " ocaml
@@ -546,7 +546,7 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 "" Open current line on GitHub
-nnoremap <Leader>o :.Gbrowse<CR>
+nnoremap <Leader>o :.GBrowse<CR>
 
 "*****************************************************************************
 "" Custom configs
@@ -669,7 +669,7 @@ augroup END
 
 " ocaml
 " Add Merlin to rtp
-" let g:opamshare = substitute(system('opam var share'),'\n$','','''')
+let g:opamshare = substitute(system('opam var share'),'\n$','','''')
 " execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 " ale

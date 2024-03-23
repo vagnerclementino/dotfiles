@@ -152,7 +152,7 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
 
 " terminal emulation
-nnoremap <silent> <leader>sh :call TermToggle(10)<CR>
+nnoremap <silent> <leader>sh :FloatermToggle <CR>
 
 let g:deoplete#enable_at_startup = 1
 
@@ -259,3 +259,19 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
+" complete text on the current line or in visual selection
+nnoremap <leader>a :AI<CR>
+xnoremap <leader>a :AI<CR>
+
+" edit text with a custom prompt
+xnoremap <leader>s :AIEdit fix grammar and spelling<CR>
+nnoremap <leader>s :AIEdit fix grammar and spelling<CR>
+
+" trigger chat
+xnoremap <leader>c :AIChat<CR>
+nnoremap <leader>c :AIChat<CR>
+
+" redo last AI command
+nnoremap <leader>r :AIRedo<CR>

@@ -23,4 +23,13 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'kristijanhusak/vim-carbon-now-sh'
 Plug '907th/vim-auto-save'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
+Plug 'tpope/vim-surround'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'MunifTanjim/nui.nvim'
+Plug 'voldikss/vim-floaterm'
+Plug 'junegunn/gv.vim'
+Plug 'tpope/vim-eunuch'
+Plug 'madox2/vim-ai'
+Plug 'mateusbraga/vim-spell-pt-br'
+Plug 'jxnblk/vim-mdx-js'
