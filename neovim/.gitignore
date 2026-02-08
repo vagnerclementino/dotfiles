@@ -1,0 +1,12 @@
+# Vim/Neovim directories
+plugged/
+autoload/
+session/
+
+# Swap files
+*.swp
+*.swo
+*~
+
+# Undo history
+.netrwhist

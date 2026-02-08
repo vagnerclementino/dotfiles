@@ -1,5 +1,10 @@
 set relativenumber
 
+" Fix guioptions for Neovim (not supported)
+if has('gui_running')
+  set guioptions=egmrti
+endif
+
 " Normal mode in terminal.
 tnoremap <Esc> <C-\><C-n>
 
@@ -156,7 +161,9 @@ nnoremap <silent> <leader>sh :call TermToggle(10)<CR>
 
 let g:deoplete#enable_at_startup = 1
 
-call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+if exists('*deoplete#custom#option')
+  call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+endif
 
 let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit"
 
@@ -251,6 +258,11 @@ let g:go_metalinter_enabled = [
 set spelllang=en,pt_br
 set spellsuggest=best,9
 
+" Auto-download spell files if missing
+if !filereadable(expand('~/.config/nvim/spell/pt.utf-8.spl'))
+  autocmd VimEnter * silent! :mkspell! ~/.config/nvim/spell/pt.utf-8.add
+endif
+
 " let g:go_debug = ['shell-commands']
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
@@ -259,3 +271,54 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+
+" ============================================
+" Writing & Markdown Configuration
+" ============================================
+
+" Spell check configuration
+set spell
+set spelllang=en,pt_br
+set spellsuggest=best,9
+
+" Goyo (distraction-free writing)
+nnoremap <leader>gy :Goyo<CR>
+
+" Limelight (focus on current paragraph)
+nnoremap <leader>ll :Limelight!!<CR>
+
+" Goyo integration with Limelight
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+" Limelight configuration
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_guifg = '#777777'
+let g:limelight_default_coefficient = 0.7
+
+" Vim-pencil configuration for writing
+let g:pencil#wrapModeDefault = 'soft'
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+
+" Markdown configuration
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+
+" Markdown shortcuts
+autocmd FileType markdown nnoremap <buffer> <leader>p :MarkdownPreview<CR>
+autocmd FileType markdown setlocal spell
+autocmd FileType markdown setlocal linebreak
+
+" Quick spell fix
+nnoremap <leader>z 1z=
+
+" Toggle spell check
+nnoremap <leader>sp :setlocal spell!<CR>
