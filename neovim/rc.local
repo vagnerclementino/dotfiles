@@ -5,6 +5,10 @@ if has('gui_running')
   set guioptions=egmrti
 endif
 
+" Disable viewdoc default mappings
+let g:no_plugin_maps = 1
+let g:viewdoc_open = 'new'
+
 " Normal mode in terminal.
 tnoremap <Esc> <C-\><C-n>
 
@@ -272,6 +276,19 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
+" Treesitter configuration
+lua << EOF
+local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
+if status_ok then
+  configs.setup {
+    ensure_installed = { "lua", "vim", "vimdoc", "markdown", "bash", "python", "go" },
+    highlight = {
+      enable = true,
+    },
+  }
+end
+EOF
+
 
 " ============================================
 " Writing & Markdown Configuration
@@ -301,8 +318,8 @@ let g:limelight_default_coefficient = 0.7
 let g:pencil#wrapModeDefault = 'soft'
 augroup pencil
   autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-  autocmd FileType text         call pencil#init()
+  autocmd FileType markdown,mkd if exists('*pencil#init') | call pencil#init({'wrap': 'soft'}) | endif
+  autocmd FileType text         if exists('*pencil#init') | call pencil#init({'wrap': 'soft'}) | endif
 augroup END
 
 " Markdown configuration

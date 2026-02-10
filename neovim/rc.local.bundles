@@ -15,7 +15,8 @@ Plug 'eandrju/cellular-automaton.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sedm0784/vim-you-autocorrect'
 Plug '907th/vim-auto-save'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Writing plugins
 Plug 'junegunn/goyo.vim'
