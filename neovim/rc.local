@@ -296,30 +296,35 @@ EOF
 
 " Spell check configuration
 set spell
-set spelllang=en,pt_br
+set spelllang=pt_br,en_us
 set spellsuggest=best,9
 
-" Goyo (distraction-free writing)
-nnoremap <leader>gy :Goyo<CR>
+" Goyo (distraction-free writing) - <leader>z for zen mode
+nnoremap <leader>z :Goyo<CR>
 
 " Limelight (focus on current paragraph)
-nnoremap <leader>ll :Limelight!!<CR>
+nnoremap <leader>l :Limelight!!<CR>
 
-" Goyo integration with Limelight
+" Goyo integration with Limelight (auto-enable when entering Goyo)
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
+
+" Goyo default width (comfortable for reading/writing)
+let g:goyo_width = 100
 
 " Limelight configuration
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_guifg = '#777777'
 let g:limelight_default_coefficient = 0.7
+let g:limelight_paragraph_span = 1
 
 " Vim-pencil configuration for writing
 let g:pencil#wrapModeDefault = 'soft'
+let g:pencil#textwidth = 80
 augroup pencil
   autocmd!
-  autocmd FileType markdown,mkd if exists('*pencil#init') | call pencil#init({'wrap': 'soft'}) | endif
-  autocmd FileType text         if exists('*pencil#init') | call pencil#init({'wrap': 'soft'}) | endif
+  autocmd FileType markdown,mkd call pencil#init({'wrap': 'soft'})
+  autocmd FileType text call pencil#init({'wrap': 'soft'})
 augroup END
 
 " Markdown configuration
@@ -328,14 +333,32 @@ let g:vim_markdown_conceal = 0
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_new_list_item_indent = 2
 
-" Markdown shortcuts
-autocmd FileType markdown nnoremap <buffer> <leader>p :MarkdownPreview<CR>
-autocmd FileType markdown setlocal spell
-autocmd FileType markdown setlocal linebreak
+" Markdown auto-commands
+augroup markdown_config
+  autocmd!
+  autocmd FileType markdown setlocal spell
+  autocmd FileType markdown setlocal linebreak
+  autocmd FileType markdown setlocal wrap
+  autocmd FileType markdown nnoremap <buffer> <leader>p :MarkdownPreview<CR>
+  " Navigate by visual lines in markdown
+  autocmd FileType markdown nnoremap <buffer> j gj
+  autocmd FileType markdown nnoremap <buffer> k gk
+augroup END
 
-" Quick spell fix
-nnoremap <leader>z 1z=
+" Quick spell fix (accept first suggestion)
+nnoremap <leader>sf 1z=
+
+" Spell navigation
+nnoremap ]s ]s
+nnoremap [s [s
 
 " Toggle spell check
 nnoremap <leader>sp :setlocal spell!<CR>
+
+" Word count for current file
+nnoremap <leader>wc :w !wc -w<CR>
+
+" Fold by markdown headers
+nnoremap <leader>mf :set foldmethod=expr foldexpr=getline(v:lnum)=~'^##'?'>1':'='<CR>
