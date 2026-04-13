@@ -13,7 +13,8 @@ link: ## Create symbolic links for i3 configuration files
 	@ln -sf $(DOTFILES_DIR)/touchpad_toggle.sh $(CONFIG_DIR)/touchpad_toggle.sh
 	@ln -sf $(DOTFILES_DIR)/urxvtc $(CONFIG_DIR)/urxvtc
 	@ln -sf $(DOTFILES_DIR)/urxvtd $(CONFIG_DIR)/urxvtd
-	@ln -sfn $(DOTFILES_DIR)/img $(CONFIG_DIR)/img
+	@rm -rf $(CONFIG_DIR)/img
+	@ln -sf $(DOTFILES_DIR)/img $(CONFIG_DIR)/img
 	@echo "✓ Symbolic links created successfully"
 
 validate: ## Validate that symbolic links are created correctly
