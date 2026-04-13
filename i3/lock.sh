@@ -2,7 +2,8 @@
 # Lock screen - Dracula theme
 # Uses i3lock-color if available, falls back to i3lock
 
-if i3lock --version 2>&1 | grep -q "i3lock-color"; then
+# Detect i3lock-color by checking if --clock flag is supported
+if i3lock --help 2>&1 | grep -q "\-\-clock"; then
     i3lock \
         --color=282a36ff \
         --inside-color=28283600 \
