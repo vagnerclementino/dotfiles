@@ -13,6 +13,7 @@ link: ## Create symbolic links for ranger configuration files
 	@ln -sf $(DOTFILES_DIR)/rifle.conf $(CONFIG_DIR)/rifle.conf
 	@ln -sf $(DOTFILES_DIR)/scope.sh $(CONFIG_DIR)/scope.sh
 	@ln -sf $(DOTFILES_DIR)/commands.py $(CONFIG_DIR)/commands.py
+	@ln -sf $(DOTFILES_DIR)/commands_full.py $(CONFIG_DIR)/commands_full.py
 	@echo "✓ Symbolic links created successfully"
 
 validate: ## Validate that symbolic links are created correctly
@@ -39,6 +40,12 @@ validate: ## Validate that symbolic links are created correctly
 		echo "✓ commands.py -> $(DOTFILES_DIR)/commands.py"; \
 	else \
 		echo "✗ commands.py link is invalid or missing"; \
+		exit 1; \
+	fi
+	@if [ -L "$(CONFIG_DIR)/commands_full.py" ] && [ "$$(readlink $(CONFIG_DIR)/commands_full.py)" = "$(DOTFILES_DIR)/commands_full.py" ]; then \
+		echo "✓ commands_full.py -> $(DOTFILES_DIR)/commands_full.py"; \
+	else \
+		echo "✗ commands_full.py link is invalid or missing"; \
 		exit 1; \
 	fi
 	@echo "✓ All symbolic links are valid"
