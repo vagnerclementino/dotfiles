@@ -148,7 +148,7 @@ bindsym $mod+Shift+E mode $session_mode
 # =============================================================================
 # Lock Screen (i3lock-color - Dracula)
 # =============================================================================
-bindsym Mod4+l exec ~/.config/i3/lock.sh
+bindsym $mod+l exec ~/.config/i3/lock.sh
 
 # =============================================================================
 # Hardware keys
