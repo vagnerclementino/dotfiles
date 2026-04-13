@@ -11,6 +11,9 @@ link: ## Create symbolic links for i3 configuration files
 	@mkdir -p $(CONFIG_DIR)
 	@ln -sf $(DOTFILES_DIR)/config $(CONFIG_DIR)/config
 	@ln -sf $(DOTFILES_DIR)/touchpad_toggle.sh $(CONFIG_DIR)/touchpad_toggle.sh
+	@ln -sf $(DOTFILES_DIR)/urxvtc $(CONFIG_DIR)/urxvtc
+	@ln -sf $(DOTFILES_DIR)/urxvtd $(CONFIG_DIR)/urxvtd
+	@ln -sfn $(DOTFILES_DIR)/img $(CONFIG_DIR)/img
 	@echo "✓ Symbolic links created successfully"
 
 validate: ## Validate that symbolic links are created correctly
@@ -25,6 +28,24 @@ validate: ## Validate that symbolic links are created correctly
 		echo "✓ touchpad_toggle.sh -> $(DOTFILES_DIR)/touchpad_toggle.sh"; \
 	else \
 		echo "✗ touchpad_toggle.sh link is invalid or missing"; \
+		exit 1; \
+	fi
+	@if [ -L "$(CONFIG_DIR)/urxvtc" ] && [ "$$(readlink $(CONFIG_DIR)/urxvtc)" = "$(DOTFILES_DIR)/urxvtc" ]; then \
+		echo "✓ urxvtc -> $(DOTFILES_DIR)/urxvtc"; \
+	else \
+		echo "✗ urxvtc link is invalid or missing"; \
+		exit 1; \
+	fi
+	@if [ -L "$(CONFIG_DIR)/urxvtd" ] && [ "$$(readlink $(CONFIG_DIR)/urxvtd)" = "$(DOTFILES_DIR)/urxvtd" ]; then \
+		echo "✓ urxvtd -> $(DOTFILES_DIR)/urxvtd"; \
+	else \
+		echo "✗ urxvtd link is invalid or missing"; \
+		exit 1; \
+	fi
+	@if [ -L "$(CONFIG_DIR)/img" ] && [ "$$(readlink $(CONFIG_DIR)/img)" = "$(DOTFILES_DIR)/img" ]; then \
+		echo "✓ img -> $(DOTFILES_DIR)/img"; \
+	else \
+		echo "✗ img link is invalid or missing"; \
 		exit 1; \
 	fi
 	@echo "✓ All symbolic links are valid"
