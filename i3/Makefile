@@ -10,6 +10,7 @@ link: ## Create symbolic links for i3 configuration files
 	@echo "Creating symbolic links..."
 	@mkdir -p $(CONFIG_DIR)
 	@ln -sf $(DOTFILES_DIR)/config $(CONFIG_DIR)/config
+	@ln -sf $(DOTFILES_DIR)/lock.sh $(CONFIG_DIR)/lock.sh
 	@ln -sf $(DOTFILES_DIR)/touchpad_toggle.sh $(CONFIG_DIR)/touchpad_toggle.sh
 	@ln -sf $(DOTFILES_DIR)/urxvtc $(CONFIG_DIR)/urxvtc
 	@ln -sf $(DOTFILES_DIR)/urxvtd $(CONFIG_DIR)/urxvtd
@@ -23,6 +24,12 @@ validate: ## Validate that symbolic links are created correctly
 		echo "✓ config -> $(DOTFILES_DIR)/config"; \
 	else \
 		echo "✗ config link is invalid or missing"; \
+		exit 1; \
+	fi
+	@if [ -L "$(CONFIG_DIR)/lock.sh" ] && [ "$$(readlink $(CONFIG_DIR)/lock.sh)" = "$(DOTFILES_DIR)/lock.sh" ]; then \
+		echo "✓ lock.sh -> $(DOTFILES_DIR)/lock.sh"; \
+	else \
+		echo "✗ lock.sh link is invalid or missing"; \
 		exit 1; \
 	fi
 	@if [ -L "$(CONFIG_DIR)/touchpad_toggle.sh" ] && [ "$$(readlink $(CONFIG_DIR)/touchpad_toggle.sh)" = "$(DOTFILES_DIR)/touchpad_toggle.sh" ]; then \
