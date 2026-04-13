@@ -16,13 +16,15 @@ Configuração do [i3wm](https://i3wm.org/) com tema [Dracula](https://draculath
 ### Fedora
 
 ```bash
-sudo dnf install i3 i3lock-color dmenu rofi feh hack-fonts adobe-source-code-pro-fonts
+sudo dnf install i3 i3lock-color dmenu rofi feh \
+                 hack-fonts adobe-source-code-pro-fonts \
+                 fontawesome-5-free-fonts fontawesome-5-brands-fonts
 ```
 
 ### Ubuntu / Debian
 
 ```bash
-sudo apt install i3 rofi feh fonts-hack fonts-source-code-pro
+sudo apt install i3 rofi feh fonts-hack fonts-source-code-pro fonts-font-awesome
 # i3lock-color precisa ser compilado: https://github.com/Raymo111/i3lock-color
 ```
 
