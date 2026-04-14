@@ -1,10 +1,20 @@
-.PHONY: link validate help
+.PHONY: link validate help install
 
 CONFIG_DIR := $(HOME)/.config/i3status
 DOTFILES_DIR := $(shell pwd)
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
+
+install: ## Install i3status
+	@if command -v dnf &>/dev/null; then \
+		sudo dnf install -y i3status; \
+	elif command -v apt &>/dev/null; then \
+		sudo apt install -y i3status; \
+	else \
+		echo "✗ Unsupported package manager"; exit 1; \
+	fi
+	@echo "✓ Packages installed"
 
 link: ## Create symbolic links for i3status configuration files
 	@echo "Creating symbolic links..."

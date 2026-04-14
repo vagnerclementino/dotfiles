@@ -1,10 +1,22 @@
-.PHONY: link validate help
+.PHONY: link validate help install
 
 CONFIG_DIR := $(HOME)/.config/i3
 DOTFILES_DIR := $(shell pwd)
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
+
+install: ## Install i3 and dependencies
+	@if command -v dnf &>/dev/null; then \
+		sudo dnf install -y i3 i3lock-color rofi feh picom xdotool jq scrot ImageMagick \
+			hack-fonts adobe-source-code-pro-fonts; \
+	elif command -v apt &>/dev/null; then \
+		sudo apt install -y i3 rofi feh picom xdotool jq scrot imagemagick \
+			fonts-hack fonts-source-code-pro; \
+	else \
+		echo "✗ Unsupported package manager"; exit 1; \
+	fi
+	@echo "✓ Packages installed"
 
 link: ## Create symbolic links for i3 configuration files
 	@echo "Creating symbolic links..."
