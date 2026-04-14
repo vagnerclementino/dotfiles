@@ -1,9 +1,15 @@
 #!/bin/bash
-# Lock screen - Dracula theme
-# Requires: i3lock-color (installed as i3lock)
+# Lock screen - Dracula theme with screen blur
+# Requires: i3lock-color, scrot, imagemagick
+
+TMPIMG=/tmp/lockscreen.png
+
+# Capture screen and apply blur
+scrot "$TMPIMG"
+convert "$TMPIMG" -blur 0x8 "$TMPIMG"
 
 i3lock \
-    --color=282a36ff \
+    -i "$TMPIMG" \
     --inside-color=28283600 \
     --ring-color=6272a4ff \
     --ringver-color=50fa7bff \
@@ -43,3 +49,5 @@ i3lock \
     --line-uses-ring \
     --show-failed-attempts \
     --nofork
+
+rm -f "$TMPIMG"
