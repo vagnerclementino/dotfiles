@@ -177,8 +177,6 @@ exec --no-startup-id blueman-tray
 # Appearance
 # =============================================================================
 for_window [class=".*"] border pixel 2
-for_window [class="Conky"] floating enable, border none, move position 0 0, sticky enable
-no_focus [class="Conky"]
 smart_gaps inverse_outer
 smart_gaps on
 gaps inner 5
