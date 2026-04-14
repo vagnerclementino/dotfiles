@@ -11,10 +11,10 @@ conky.config = {
     -- Window
     own_window = true,
     own_window_type = 'override',
-    own_window_transparent = true,
+    own_window_transparent = false,
     own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
     own_window_argb_visual = true,
-    own_window_argb_value = 0,
+    own_window_argb_value = 230,
 
     -- Size and position
     minimum_width = 300,
