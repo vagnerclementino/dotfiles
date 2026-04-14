@@ -52,7 +52,7 @@ else
 fi
 
 # Truncate if too long
-GREETER="${GREETER:0:80}"
+GREETER="${GREETER:0:120}"
 
 i3lock \
     -i "$TMPIMG" \
@@ -89,7 +89,7 @@ i3lock \
     --greeter-text="$GREETER" \
     --greeter-color=bd93f9ff \
     --greeter-font="Hack" \
-    --greeter-size=18 \
+    --greeter-size=12 \
     --greeter-pos="x+w/2:y+h/2+200" \
     --ind-pos="x+w/2:y+h/2" \
     --line-uses-ring \
