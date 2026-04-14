@@ -11,6 +11,7 @@ Coleção pessoal de [dotfiles](https://wiki.archlinux.org/title/Dotfiles) — a
 | [polybar](polybar/) | Barra de status customizável (Dracula) |
 | [rofi](rofi/) | Application launcher (Dracula) |
 | [conky](conky/) | Monitor de sistema no desktop (Dracula) |
+| [alacritty](alacritty/) | Emulador de terminal (Dracula + transparência) |
 | [ranger](ranger/) | Gerenciador de arquivos no terminal |
 | [neovim](neovim/) | Editor de texto Neovim (vim-bootstrap) |
 | [vim](vim/) | Editor de texto Vim |
