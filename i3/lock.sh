@@ -1,12 +1,42 @@
 #!/bin/bash
-# Lock screen - Dracula theme with screen blur
-# Requires: i3lock-color, scrot, imagemagick
+# Lock screen - Dracula theme with screen blur + random quote
+# Requires: i3lock-color, scrot, imagemagick, curl, jq
 
 TMPIMG=/tmp/lockscreen.png
 
 # Capture screen and apply blur
 scrot "$TMPIMG"
 convert "$TMPIMG" -blur 0x8 "$TMPIMG"
+
+# Try to fetch a random quote from API (timeout 2s)
+QUOTE_JSON=$(curl -s --max-time 2 "https://dummyjson.com/quotes/random" 2>/dev/null)
+if [ -n "$QUOTE_JSON" ] && echo "$QUOTE_JSON" | jq -e .quote &>/dev/null; then
+    QUOTE=$(echo "$QUOTE_JSON" | jq -r '.quote')
+    AUTHOR=$(echo "$QUOTE_JSON" | jq -r '.author')
+    GREETER="$QUOTE - $AUTHOR"
+else
+    # Fallback local quotes
+    FALLBACK=(
+        "It's dangerous to go alone! Take this. - Zelda"
+        "The cake is a lie. - Portal"
+        "War. War never changes. - Fallout"
+        "Do or do not. There is no try. - Yoda"
+        "I am root. - sudo"
+        "There is no place like 127.0.0.1"
+        "Talk is cheap. Show me the code. - Linus Torvalds"
+        "May the --force be with you"
+        "Have you tried turning it off and on again? - IT Crowd"
+        "Hello, friend. - Mr. Robot"
+        "Hack the planet! - Hackers"
+        "With great power comes great responsibility. - Uncle Ben"
+        "I am Groot. - Groot"
+        "It compiles; ship it!"
+    )
+    GREETER="${FALLBACK[$((RANDOM % ${#FALLBACK[@]}))]}"
+fi
+
+# Truncate if too long
+GREETER="${GREETER:0:80}"
 
 i3lock \
     -i "$TMPIMG" \
@@ -40,10 +70,10 @@ i3lock \
     --date-font="Source Code Pro" \
     --date-size=24 \
     --date-pos="tx:ty+40" \
-    --greeter-text="Dracula" \
+    --greeter-text="$GREETER" \
     --greeter-color=bd93f9ff \
     --greeter-font="Hack" \
-    --greeter-size=32 \
+    --greeter-size=18 \
     --greeter-pos="x+w/2:y+h/2+200" \
     --ind-pos="x+w/2:y+h/2" \
     --line-uses-ring \
