@@ -10,6 +10,7 @@ link: ## Create symbolic links for conky configuration files
 	@echo "Creating symbolic links..."
 	@mkdir -p $(CONFIG_DIR)
 	@ln -sf $(DOTFILES_DIR)/conkyrc $(CONFIG_DIR)/conkyrc
+	@ln -sf $(DOTFILES_DIR)/conky-toggle.sh $(CONFIG_DIR)/conky-toggle.sh
 	@echo "✓ Symbolic links created successfully"
 
 validate: ## Validate that symbolic links are created correctly
@@ -18,6 +19,12 @@ validate: ## Validate that symbolic links are created correctly
 		echo "✓ conkyrc -> $(DOTFILES_DIR)/conkyrc"; \
 	else \
 		echo "✗ conkyrc link is invalid or missing"; \
+		exit 1; \
+	fi
+	@if [ -L "$(CONFIG_DIR)/conky-toggle.sh" ] && [ "$$(readlink $(CONFIG_DIR)/conky-toggle.sh)" = "$(DOTFILES_DIR)/conky-toggle.sh" ]; then \
+		echo "✓ conky-toggle.sh -> $(DOTFILES_DIR)/conky-toggle.sh"; \
+	else \
+		echo "✗ conky-toggle.sh link is invalid or missing"; \
 		exit 1; \
 	fi
 	@echo "✓ All symbolic links are valid"

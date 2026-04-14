@@ -166,6 +166,7 @@ exec_always --no-startup-id feh --bg-fill ~/.config/i3/img/bg.jpg
 exec_always --no-startup-id mpd ~/.config/mpd/mpd.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id nm-applet
+exec_always --no-startup-id ~/.config/conky/conky-toggle.sh
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox-aurora'
 exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
