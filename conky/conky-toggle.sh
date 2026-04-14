@@ -1,5 +1,5 @@
 #!/bin/bash
-# Show conky only when current workspace has no windows
+# Show conky only when current workspace has no windows (excluding conky)
 # Requires: jq
 
 CONKY_CONF="$HOME/.config/conky/conkyrc"
@@ -15,7 +15,7 @@ count_windows() {
         select(.type == "workspace") |
         select(any(recurse(.nodes[]?); .focused == true)) |
         recurse(.nodes[]?, .floating_nodes[]?) |
-        select(.window != null)
+        select(.window != null and .window_properties.class != "Conky")
     ] | length' 2>/dev/null
 }
 
@@ -29,9 +29,10 @@ update() {
     fi
 }
 
+sleep 1
 update
 
 i3-msg -t subscribe -m '["window","workspace"]' | while read -r _; do
-    sleep 0.2
+    sleep 0.3
     update
 done
