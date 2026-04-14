@@ -89,7 +89,7 @@ i3lock \
     --greeter-text="$GREETER" \
     --greeter-color=bd93f9ff \
     --greeter-font="Hack" \
-    --greeter-size=14 \
+    --greeter-size=16 \
     --greeter-pos="x+w/2:y+h/2+200" \
     --ind-pos="x+w/2:y+h/2" \
     --line-uses-ring \
