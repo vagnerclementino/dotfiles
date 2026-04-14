@@ -1,36 +1,37 @@
 #!/bin/bash
-# Show conky only when workspace has no windows
-# Requires: jq, xdotool
+# Show conky only when current workspace has no windows
+# Requires: jq
 
-# Start conky if not running
-pgrep -x conky >/dev/null || conky -c ~/.config/conky/conkyrc -d
+CONKY_CONF="$HOME/.config/conky/conkyrc"
 
-sleep 1
-CONKY_WID=$(xdotool search --class Conky | head -1)
+# Kill previous instance of this script
+for pid in $(pgrep -f "conky-toggle.sh"); do
+    [ "$pid" != "$$" ] && kill "$pid" 2>/dev/null
+done
 
-get_window_count() {
-    i3-msg -t get_tree | jq '
+count_windows() {
+    i3-msg -t get_tree | jq '[
         recurse(.nodes[]?, .floating_nodes[]?) |
-        select(.type == "workspace" and .visible == true) |
-        [recurse(.nodes[]?, .floating_nodes[]?) | select(.window != null)] |
-        length
-    ' 2>/dev/null | head -1
+        select(.type == "workspace") |
+        select(any(recurse(.nodes[]?); .focused == true)) |
+        recurse(.nodes[]?, .floating_nodes[]?) |
+        select(.window != null)
+    ] | length' 2>/dev/null
 }
 
-toggle() {
-    local count
-    count=$(get_window_count)
-    if [ -n "$CONKY_WID" ]; then
-        if [ "${count:-0}" -eq 0 ]; then
-            xdotool windowmap "$CONKY_WID" 2>/dev/null
-        else
-            xdotool windowunmap "$CONKY_WID" 2>/dev/null
-        fi
+update() {
+    local n
+    n=$(count_windows)
+    if [ "${n:-0}" -eq 0 ]; then
+        pgrep -x conky >/dev/null || conky -c "$CONKY_CONF" -d
+    else
+        killall -q conky 2>/dev/null
     fi
 }
 
-toggle
+update
 
 i3-msg -t subscribe -m '["window","workspace"]' | while read -r _; do
-    toggle
+    sleep 0.2
+    update
 done
