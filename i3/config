@@ -149,7 +149,7 @@ bindsym $mod+Shift+E mode $session_mode
 # Lock Screen (i3lock-color - Dracula)
 # =============================================================================
 # xss-lock intercepts system lock/sleep and uses our lock script
-exec --no-startup-id xss-lock --transfer-sleep-lock -- ~/.config/i3/lock.sh
+exec_always --no-startup-id pkill -x xss-lock; xss-lock --transfer-sleep-lock -- ~/.config/i3/lock.sh &
 bindsym $mod+l exec ~/.config/i3/lock.sh
 
 # =============================================================================

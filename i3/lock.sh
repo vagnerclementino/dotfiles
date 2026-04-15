@@ -4,9 +4,13 @@
 
 TMPIMG=/tmp/lockscreen.png
 
-# Capture screen and apply blur
-scrot "$TMPIMG"
-convert "$TMPIMG" -blur 0x8 "$TMPIMG"
+# Capture screen and apply blur (may fail if screen is off)
+if scrot "$TMPIMG" 2>/dev/null && [ -f "$TMPIMG" ]; then
+    convert "$TMPIMG" -blur 0x8 "$TMPIMG"
+    LOCK_BG="-i $TMPIMG"
+else
+    LOCK_BG="--color=282a36ff"
+fi
 
 # Try to fetch a random quote from API (timeout 2s)
 QUOTE_JSON=$(curl -s --max-time 2 "https://dummyjson.com/quotes/random" 2>/dev/null)
@@ -55,7 +59,7 @@ fi
 GREETER="${GREETER:0:120}"
 
 i3lock \
-    -i "$TMPIMG" \
+    $LOCK_BG \
     --inside-color=28283600 \
     --ring-color=6272a4ff \
     --ringver-color=50fa7bff \
