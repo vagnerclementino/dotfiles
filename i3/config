@@ -171,9 +171,6 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id ~/.config/conky/conky-toggle.sh
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id i3-msg 'workspace 1; exec /usr/bin/firefox-aurora'
-exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
-exec --no-startup-id volumeicon
-exec --no-startup-id blueman-tray
 
 # =============================================================================
 # Appearance
