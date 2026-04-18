@@ -1,10 +1,20 @@
-.PHONY: link validate help
+.PHONY: link validate help install
 
 CONFIG_DIR := $(HOME)/.config/termite
 DOTFILES_DIR := $(shell pwd)
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
+
+install: ## Install termite
+	@if command -v dnf &>/dev/null; then \
+		sudo dnf install -y termite || echo "⚠ termite may not be in official repos"; \
+	elif command -v apt &>/dev/null; then \
+		sudo apt install -y termite || echo "⚠ termite may not be in official repos"; \
+	else \
+		echo "✗ Unsupported package manager"; exit 1; \
+	fi
+	@echo "✓ Install attempted"
 
 link: ## Create symbolic links for termite configuration files
 	@echo "Creating symbolic links..."

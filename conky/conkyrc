@@ -1,0 +1,77 @@
+-- Conky - Dracula Theme
+-- Transparent overlay on desktop
+
+conky.config = {
+    alignment = 'top_right',
+    background = true,
+    double_buffer = true,
+    no_buffers = true,
+    update_interval = 2,
+
+    -- Window
+    own_window = true,
+    own_window_type = 'override',
+    own_window_transparent = false,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_argb_visual = true,
+    own_window_argb_value = 230,
+
+    -- Size and position
+    minimum_width = 300,
+    minimum_height = 0,
+    gap_x = 20,
+    gap_y = 60,
+
+    -- Borders
+    border_width = 0,
+    draw_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    draw_graph_borders = false,
+
+    -- Font
+    use_xft = true,
+    font = 'Hack Nerd Font:size=10',
+    override_utf8_locale = true,
+
+    -- Dracula colors
+    default_color = 'f8f8f2',
+    color1 = 'bd93f9',  -- purple
+    color2 = '50fa7b',  -- green
+    color3 = 'ff79c6',  -- pink
+    color4 = '8be9fd',  -- cyan
+    color5 = 'ffb86c',  -- orange
+    color6 = '6272a4',  -- comment
+    color7 = 'ff5555',  -- red
+};
+
+conky.text = [[
+${color1}${font Hack Nerd Font:Bold:size=12}SYSTEM ${hr 2}${font}
+${color6}Host:${color} ${nodename}
+${color6}Kernel:${color} ${kernel}
+${color6}Uptime:${color} ${uptime_short}
+
+${color3}${font Hack Nerd Font:Bold:size=12}CPU ${hr 2}${font}
+${color6}Usage:${color} ${cpu}% ${cpubar 6}
+${color6}Freq:${color} ${freq_g}GHz
+${color6}Temp:${color} ${acpitemp}°C
+
+${color4}${font Hack Nerd Font:Bold:size=12}MEMORY ${hr 2}${font}
+${color6}RAM:${color} ${mem}/${memmax} ${membar 6}
+${color6}Swap:${color} ${swap}/${swapmax} ${swapbar 6}
+
+${color2}${font Hack Nerd Font:Bold:size=12}DISK ${hr 2}${font}
+${color6}Root:${color} ${fs_used /}/${fs_size /} ${fs_bar 6 /}
+${color6}Home:${color} ${fs_used /home}/${fs_size /home} ${fs_bar 6 /home}
+
+${color5}${font Hack Nerd Font:Bold:size=12}NETWORK ${hr 2}${font}
+${color6}Down:${color} ${downspeed wlo1}  ${color6}Up:${color} ${upspeed wlo1}
+
+${color7}${font Hack Nerd Font:Bold:size=12}TOP PROCESSES ${hr 2}${font}
+${color6}Name               CPU%   MEM%${color}
+${top name 1} ${top cpu 1} ${top mem 1}
+${top name 2} ${top cpu 2} ${top mem 2}
+${top name 3} ${top cpu 3} ${top mem 3}
+${top name 4} ${top cpu 4} ${top mem 4}
+${top name 5} ${top cpu 5} ${top mem 5}
+]];

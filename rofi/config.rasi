@@ -1,0 +1,101 @@
+/* Rofi - Dracula Theme */
+/* Fonts: Hack + Source Code Pro */
+
+* {
+    bg:       #282a36;
+    bg-alt:   #44475a;
+    fg:       #f8f8f2;
+    fg-alt:   #6272a4;
+    cyan:     #8be9fd;
+    green:    #50fa7b;
+    orange:   #ffb86c;
+    pink:     #ff79c6;
+    purple:   #bd93f9;
+    red:      #ff5555;
+    yellow:   #f1fa8c;
+
+    background-color: @bg;
+    text-color:       @fg;
+    font:             "Hack 12";
+}
+
+window {
+    width:            40%;
+    border:           2px;
+    border-color:     @purple;
+    border-radius:    8px;
+    padding:          0;
+}
+
+mainbox {
+    padding:  0;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding:          10px 16px;
+    background-color: @bg-alt;
+    children:         [ prompt, entry ];
+    spacing:          10px;
+}
+
+prompt {
+    background-color: @purple;
+    text-color:       @bg;
+    padding:          4px 10px;
+    border-radius:    4px;
+    font:             "Source Code Pro Bold 12";
+}
+
+entry {
+    padding:          4px;
+    placeholder:      "Buscar...";
+    placeholder-color: @fg-alt;
+}
+
+listview {
+    lines:            8;
+    padding:          8px 0;
+    scrollbar:        false;
+}
+
+element {
+    padding:          8px 16px;
+}
+
+element normal.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+element alternate.normal {
+    background-color: @bg;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @bg-alt;
+    text-color:       @purple;
+    border:           0 0 0 3px;
+    border-color:     @purple;
+}
+
+element normal.urgent {
+    background-color: @red;
+    text-color:       @bg;
+}
+
+element selected.urgent {
+    background-color: @red;
+    text-color:       @fg;
+}
+
+element normal.active {
+    background-color: @bg;
+    text-color:       @green;
+}
+
+element selected.active {
+    background-color: @bg-alt;
+    text-color:       @green;
+}
