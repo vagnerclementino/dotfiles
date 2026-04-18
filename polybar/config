@@ -415,12 +415,12 @@ format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
-format-prefix = " "
+format-prefix = ""
 label = %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = +
+ramp-0 =
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
