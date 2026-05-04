@@ -1,6 +1,6 @@
 # Alacritty - Dracula Theme + Transparency
 
-[shell]
+[terminal.shell]
 program = "/bin/sh"
 args = ["-c", "tmux new-session -A -s main"]
 
@@ -55,3 +55,5 @@ blue    = "#d6acff"
 magenta = "#ff92df"
 cyan    = "#a4ffff"
 white   = "#ffffff"
+
+[terminal]
